@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aircraft Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <header class="bg-blue-700 text-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-semibold">Aircraft Management System</h1>
+      <nav class="space-x-6">
+        <a href="#aircraft" class="hover:underline">Aircraft</a>
+        <a href="#maintenance" class="hover:underline">Maintenance</a>
+        <a href="#flights" class="hover:underline">Flights</a>
+        <a href="#crew" class="hover:underline">Crew</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 flex-grow">
+    <!-- Aircraft Section -->
+    <section id="aircraft" class="mb-12">
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fas fa-plane"></i> Aircraft
+      </h2>
+      <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Manufacturer</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Capacity</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Registration Number</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Boeing 737</td>
+              <td class="px-6 py-4 whitespace-nowrap">Boeing</td>
+              <td class="px-6 py-4 whitespace-nowrap">160</td>
+              <td class="px-6 py-4 whitespace-nowrap">N73701</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Airbus A320</td>
+              <td class="px-6 py-4 whitespace-nowrap">Airbus</td>
+              <td class="px-6 py-4 whitespace-nowrap">150</td>
+              <td class="px-6 py-4 whitespace-nowrap">N32001</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Cessna 172</td>
+              <td class="px-6 py-4 whitespace-nowrap">Cessna</td>
+              <td class="px-6 py-4 whitespace-nowrap">4</td>
+              <td class="px-6 py-4 whitespace-nowrap">N17201</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section id="maintenance" class="mb-12">
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fas fa-tools"></i> Maintenance Records
+      </h2>
+      <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aircraft</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Boeing 737 (N73701)</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-01-15</td>
+              <td class="px-6 py-4 whitespace-nowrap">Engine check and oil change</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Airbus A320 (N32001)</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-02-10</td>
+              <td class="px-6 py-4 whitespace-nowrap">Landing gear inspection</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Cessna 172 (N17201)</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-03-05</td>
+              <td class="px-6 py-4 whitespace-nowrap">Annual safety inspection</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Flights Section -->
+    <section id="flights" class="mb-12">
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fas fa-route"></i> Flights
+      </h2>
+      <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Flight Number</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Origin</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Destination</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aircraft</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departure</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Arrival</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">AA101</td>
+              <td class="px-6 py-4 whitespace-nowrap">New York</td>
+              <td class="px-6 py-4 whitespace-nowrap">Los Angeles</td>
+              <td class="px-6 py-4 whitespace-nowrap">Boeing 737</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-01 08:00</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-01 11:00</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">BA202</td>
+              <td class="px-6 py-4 whitespace-nowrap">London</td>
+              <td class="px-6 py-4 whitespace-nowrap">Paris</td>
+              <td class="px-6 py-4 whitespace-nowrap">Airbus A320</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-02 09:00</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-02 10:30</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">CA303</td>
+              <td class="px-6 py-4 whitespace-nowrap">San Francisco</td>
+              <td class="px-6 py-4 whitespace-nowrap">Seattle</td>
+              <td class="px-6 py-4 whitespace-nowrap">Cessna 172</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-03 07:00</td>
+              <td class="px-6 py-4 whitespace-nowrap">2024-06-03 08:30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Crew Section -->
+    <section id="crew" class="mb-12">
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fas fa-users"></i> Crew Members
+      </h2>
+      <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">First Name</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Name</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">John</td>
+              <td class="px-6 py-4 whitespace-nowrap">Doe</td>
+              <td class="px-6 py-4 whitespace-nowrap">Pilot</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Jane</td>
+              <td class="px-6 py-4 whitespace-nowrap">Smith</td>
+              <td class="px-6 py-4 whitespace-nowrap">Co-Pilot</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Emily</td>
+              <td class="px-6 py-4 whitespace-nowrap">Johnson</td>
+              <td class="px-6 py-4 whitespace-nowrap">Flight Attendant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-700 text-white text-center py-4">
+    &copy; 2024 Aircraft Management System
+  </footer>
+</body>
+</html>
